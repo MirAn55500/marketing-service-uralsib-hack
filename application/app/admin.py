@@ -1,4 +1,8 @@
 from django.contrib import admin
-from .models import User
 
-admin.site.register(User)
+# Register your models here.
+from .models import *
+
+admin.site.register(TemperatureSensor)
+admin.site.register(TemperatureHistory)
+admin.site.register(RelayCondition)

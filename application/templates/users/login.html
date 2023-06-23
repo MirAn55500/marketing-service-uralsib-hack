@@ -1,0 +1,38 @@
+{% extends 'base_template.html' %}
+
+{% block title %}Войти{% endblock %}
+
+{% load static %}
+
+{% block files %}
+{% endblock %}
+
+{% load crispy_forms_tags %}
+{% block content %}
+
+<div class="container">
+    <div class="row">
+      <div class="col-md-6 offset-md-3 mt-5">
+        <h2 class="text-center mb-4">Авторизация</h2>
+      </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3 mt-5">
+            <form method="POST">
+                {% csrf_token %}
+                <fieldset class="form-group">
+                    {{ form|crispy }}
+                </fieldset>
+                <div class="form-group">
+                    <button class="btn btn-primary" type="submit">Войти</button>
+                </div>
+            </form>
+            {{ error }}
+        </div>
+    </div>
+</div>
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends 'base_template.html' %}
+
+{% block title %}Источники питания{% endblock %}
+
+{% load static %}
+
+{% block files %}
+{% endblock %}
+
+{% block content %}
+<table class="table">
+      <thead>
+      <tr>
+          <th>Источник питания</th>
+          <th>Суммарная нагрузка</th>
+          <th>КПД</th>
+      </tr>
+      <tr>
+          <td>Блок питания №1</td>
+          <td>{{power}} А</td>
+          <td>{{KPD}}%</td>
+      </tr>
+      <tr>
+          <td>Блок питания №2</td>
+          <td>{{power}} A</td>
+          <td>{{KPD}}%</td>
+      </tr>
+      <tr>
+          <td>Блок питания №3</td>
+          <td>{{power}} A</td>
+          <td>{{KPD}}%</td>
+      </tr>
+      <tr>
+          <td>Блок питания №{{'4'}}</td>
+          <td>{{power}} A</td>
+          <td>{{KPD}}%</td>
+      </tr>
+
+      </thead>
+      <tbody id="userTableBody">
+      </tbody>
+</table>
+{% endblock %}
